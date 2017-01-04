@@ -34,8 +34,6 @@ public class UserController {
 	public UserTo userSave(@RequestBody UserTo user, UriComponentsBuilder ucBuilder) {
 		final UserTo usrTo = userService.saveUser(user);
 		
-		//final UserTo usrTo = userService.saveUser(user);
-		
 		mailSender.send(new MimeMessagePreparator() {
 			@Override
 			public void prepare(MimeMessage mimeMessage) throws Exception {
