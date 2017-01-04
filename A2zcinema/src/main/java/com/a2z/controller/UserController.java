@@ -33,7 +33,7 @@ public class UserController {
 	@RequestMapping(value = "/userSave/", method = RequestMethod.POST)
 	public UserTo userSave(@RequestBody UserTo user, UriComponentsBuilder ucBuilder) {
 		final UserTo usrTo = userService.saveUser(user);
-		//final UserTo usrTo = userService.saveUser(user);
+		//final UserTo usrTo = userService.saveUser(user);  bdbsdbdbddbsbdvdadjbdkv
 		mailSender.send(new MimeMessagePreparator() {
 			@Override
 			public void prepare(MimeMessage mimeMessage) throws Exception {
